@@ -1,0 +1,72 @@
+{
+  "name": "weiflow-ui",
+  "version": "1.0.0",
+  "description": "A Component Library for Vue.js.",
+  "keywords": [
+    "weiflow-ui",
+    "vue",
+    "element-ui",
+    "component-library",
+    "ui-components"
+  ],
+  "main": "dist/weiflow-ui.common.js",
+  "unpkg": "dist/weiflow-ui.umd.min.js",
+  "files": [
+    "dist",
+    "packages",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name weiflow-ui packages/index.js",
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "homepage": "https://github.com/daliweiwei/weiflow-ui#readme",
+  "bugs": {
+    "url": "https://github.com/daliweiwei/weiflow-ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daliweiwei/weiflow-ui.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "liweiliang",
+    "email": "406320591@qq.com"
+  },
+  "peerDependencies": {
+    "vue": ">=2.6.0 <3.0.0",
+    "element-ui": ">=2.15.0 <3.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "core-js": "^3.8.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "vue": "^2.7.16",
+    "element-ui": "^2.15.14",
+    "vue-template-compiler": "^2.7.16"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "*.vue"
+  ]
+}
