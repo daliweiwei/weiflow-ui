@@ -1,9 +1,10 @@
 {
   "name": "weiflow-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Component Library for Vue.js.",
   "keywords": [
     "weiflow-ui",
+    "WeiFlowUI",
     "vue",
     "element-ui",
     "component-library",
@@ -53,8 +54,8 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.0.0",
     "prettier": "^3.2.0",
-    "sass": "^1.69.0",
-    "sass-loader": "^13.3.0",
+    "sass": "^1.69.7",
+    "sass-loader": "^14.2.1",
     "vue": "^2.7.16",
     "element-ui": "^2.15.14",
     "vue-template-compiler": "^2.7.16"
