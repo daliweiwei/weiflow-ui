@@ -14,7 +14,6 @@
   "unpkg": "dist/weiflow-ui.umd.min.js",
   "files": [
     "dist",
-    "packages",
     "README.md",
     "LICENSE"
   ],

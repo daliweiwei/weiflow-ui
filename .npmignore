@@ -1,7 +1,9 @@
 # 依赖目录
 node_modules/
+package-lock.json
 
 # 开发源码目录（发布只需 dist/ 和 packages/）
+packages/
 src/
 public/
 
