@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="menuNav">
+      <router-link v-for="(item, index) in munuList" :key="index" :to="item.path">
+        {{ item.label }}
+      </router-link>
+
+    </nav>
+    <router-view/>
   </div>
 </template>
 
@@ -11,6 +17,52 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      munuList: [
+        {
+          label: "Home",
+          path: "/"
+        },
+        {
+          label: "barCode",
+          path: "/barCode"
+        },
+        {
+          label: "Install",
+          path: "/install"
+        },
+        {
+          label: "Common",
+          path: "/common"
+        },
+        {
+          label: "demo",
+          path: "/demo"
+        },
+        {
+          label: "login",
+          path: "/login"
+        },
+        {
+          label: "siui",
+          path: "/siui"
+        },
+        {
+          label: "form",
+          path: "/form"
+        },
+        {
+          label: "dialog",
+          path: "/dialog"
+        },
+        {
+          label: "about",
+          path: "/about"
+        }
+      ]
+    }
   }
 }
 </script>

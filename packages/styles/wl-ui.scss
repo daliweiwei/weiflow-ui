@@ -1,0 +1,289 @@
+/**
+ * Created by liweiliang 406320591@QQ.com on 2026/7/02 11:15.
+ */
+
+$fontColor: #000028; /*select input 左侧label字体颜色*/
+$tagColor: #007993; /*select 下拉多选，已选中内容颜色*/
+$selectColor: #4C4C68; /*select cascader 下拉角标颜色*/
+$topSolidLine: #009999; /* card collapse 标题顶部线颜色 */
+$iconLeftArrow: #00CC94; /*card collapse，标题左侧icon图标颜色*/
+
+
+.si-tabs {
+  & > .el-tabs__header {
+    border-bottom: none;
+
+    .el-tabs__nav {
+      border: none;
+
+      .el-tabs__active-bar {
+        background-color: transparent;
+      }
+    }
+
+    .el-tabs__item {
+      position: relative;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 40px;
+      color: #000028;
+      border-left: none;
+
+      &:hover {
+        color: #196269;
+        background: #d1fff2;
+      }
+
+      &.is-active {
+        color: #005159;
+
+        &::after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          display: block;
+          content: "";
+          width: 100%;
+          height: 4px;
+          background: #61acbc;
+        }
+      }
+
+      &.is-top, &.is-bottom {
+        &:nth-child(2) {
+          padding-left: 40px;
+        }
+
+        &:last-child {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+.wl-card {
+  border: none !important;
+  border-radius: unset !important;
+  box-shadow: none !important;
+  margin-bottom: 10px !important;
+  overflow: unset;
+
+  .el-card__header {
+    padding: 6px 11px;
+    line-height: 19px;
+    font-size: 14px;
+    height: 33px;
+    min-height: 33px;
+    font-weight: 500;
+    color: #fff;
+    //border-bottom: none;
+    border-bottom: 2px solid $topSolidLine;
+    background: url("../img/title_bg.png") no-repeat;
+    //background: linear-gradient(135deg, #009999 0%, #00CC94 100%);
+    i {
+      font-size: 16px;
+      margin-right: 3px;
+    }
+
+    .el-button--text {
+      color: #007993;
+
+      &:focus, &:hover {
+        color: #196269;
+      }
+    }
+
+  }
+
+  .el-card__body {
+    border: 1px solid transparent;
+  }
+
+  &.is-always-shadow,
+  &.is-hover-shadow:focus,
+  &.is-hover-shadow:hover {
+    .el-card__body {
+      border-radius: 4px;
+      border: 1px solid #EBEEF5;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: .3s;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1)
+    }
+  }
+
+}
+
+.si-collapse {
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+
+  .el-collapse-item {
+    margin-bottom: 10px;
+
+    .el-collapse-item__header {
+      position: relative;
+      padding: 2px 0 0 30px;
+      height: 29px;
+      line-height: 29px;
+      color: #fff;
+      font-size: 14px;
+      border-bottom: 3px solid $topSolidLine;
+      background: url("../img/title_bg.png") no-repeat left center;
+      //background-size: 144px;
+      background-size: 200px;
+
+      .el-collapse-item__arrow {
+        position: absolute;
+        left: 12px;
+        top: 10px;
+      }
+
+    }
+  }
+
+  .el-collapse-item__wrap {
+    border: none;
+
+    .el-collapse-item__content {
+      background-color: transparent;
+      padding: 10px;
+    }
+  }
+
+  &.si-collapse-child {
+    background: #F4F9F8;
+
+    .el-collapse-item__header {
+      color: #000028;
+      border-bottom: unset;
+      background: transparent;
+
+      .si-collapse-btn {
+        color: #009999;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+
+    .el-collapse-item {
+      margin-bottom: 10px;
+
+      .el-collapse-item__wrap {
+        padding: 0 15px;
+        background: transparent;
+      }
+    }
+  }
+}
+
+.si-table {
+  thead {
+    &.is-group {
+      th {
+        &.el-table__cell {
+          padding: 0;
+
+          .el-input--mini {
+            .el-input__inner {
+              color: #66667E;
+              height: 26px;
+              line-height: 26px;
+            }
+          }
+        }
+
+        &.is-leaf {
+          padding: 4px 0;
+        }
+      }
+    }
+  }
+
+  th {
+    &.el-table__cell {
+      color: #687182;
+      //background: rgba(247, 249, 252, 0.8) ;
+      background: #FAFAFA;
+    }
+  }
+
+  .el-table__cell {
+    color: #171C26;
+    font-size: 14px;
+  }
+
+  .el-table__body {
+    tr {
+      &:hover {
+        > td {
+          &.el-table__cell {
+            background-color: rgba(0, 255, 185, .1);
+          }
+        }
+      }
+
+      &.hover-row {
+        &.el-table__row--striped {
+          & > td {
+            &.el-table__cell {
+              background-color: rgba(0, 255, 185, .1);
+            }
+          }
+        }
+
+        > td {
+          &.el-table__cell {
+            background-color: rgba(0, 255, 185, .1);
+          }
+        }
+      }
+
+    }
+  }
+
+  .si-table-link {
+    color: #009999;
+
+    &:hover {
+      color: #005159;
+
+      &:after {
+        border-bottom: 1px solid #005159;
+      }
+    }
+  }
+}
+
+.si-timeline {
+  padding: 15px 0 15px 75px;
+
+  .el-timeline-item__node--normal {
+    top: 3px;
+    width: 9px;
+    height: 9px;
+    background-color: #009999;
+  }
+
+  .el-timeline-item__tail {
+    top: 3px;
+    left: 3px;
+    border-left: 1px solid #D5DBE5;
+  }
+
+  .el-timeline-item__content {
+    span {
+      color: #171C26;
+    }
+
+    color: #009999;
+    font-size: 14px;
+  }
+
+  .el-timeline-item__wrapper {
+    padding-left: 20px;
+    top: -7px;
+  }
+}

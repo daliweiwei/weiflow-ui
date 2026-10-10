@@ -1,0 +1,408 @@
+/**
+ * Si-UI 全局公共样式
+ * Created by Siemens
+ */
+//$fontColor: #000028; /*字体颜色*/
+//$fontColor: #606266; /*字体颜色*/
+$--font-color: #009999; /*字体颜色*/
+$--background-color-base: #009999; /*background 背景颜色*/
+$--border-color-base: #009999; /*border 边框颜色*/
+$--border-color: #00D7A0; /*border 边框颜色*/
+$--tag-color: #007993; /*select 下拉多选，已选中内容颜色*/
+
+$sideColor: #009999; /*border 边框颜色*/
+$--select-color: #4C4C68; /*select cascader 下拉角标颜色*/
+
+// cover some element-ui styles
+
+/* 通用表单样式 */
+.si-form {
+  .el-form-item {
+    margin-bottom: 22px;
+
+  }
+}
+.el-input{
+  &.is-disabled{
+    .el-input__inner{
+      color: #303133;
+    }
+  }
+}
+.si-select {
+  .el-input {
+    .el-select__caret {
+      color: $--select-color;
+    }
+  }
+
+  .el-tag {
+    &.el-tag--info {
+      color: $--tag-color;
+      padding: 0 8px;
+      border-radius: 10px;
+
+      .el-tag__close {
+        color: $--tag-color;
+        font-weight: bold;
+        background-color: transparent;
+      }
+    }
+  }
+
+}
+
+.si-radio {
+  .el-radio-button__inner {
+    &:hover {
+      //color: #005159 ;
+    }
+  }
+
+  .el-radio__input {
+    &.is-checked {
+      + .el-radio__label {
+        color: $--font-color;
+      }
+
+      .el-radio__inner {
+        background: $--background-color-base;
+        border-color: $--border-color-base;
+      }
+    }
+  }
+
+  .el-radio-button__orig-radio {
+    &:checked {
+      + .el-radio-button__inner {
+        background-color: $--background-color-base;
+        border-color: $--border-color-base;
+      }
+    }
+  }
+}
+
+
+.el-radio__input {
+  &.is-checked {
+    + .el-radio__label {
+      color: #005159;
+    }
+
+    .el-radio__inner {
+      border-color: #005159;
+      background: #005159;
+    }
+  }
+}
+
+.el-checkbox__input {
+  &.is-checked {
+    .el-checkbox__inner {
+      background-color: $--background-color-base;
+      border-color: $--border-color-base;
+    }
+
+    + .el-checkbox__label {
+      color: $--font-color;
+    }
+  }
+
+  &.is-indeterminate {
+    .el-checkbox__inner {
+      background-color: $--background-color-base;
+      border-color: $--border-color-base;
+    }
+  }
+}
+
+.el-input__inner, .el-textarea__inner {
+  border-radius: 2px;
+  color: $--font-color;
+  border: 1px solid #CCCCD4;
+
+  &::-webkit-input-placeholder, &::-ms-input-placeholder, &::-ms-input-placeholder, &::placeholder {
+    color: #CBCBD1;
+  }
+
+  &:hover {
+    border: 1px solid $--border-color;
+  }
+
+  &:focus {
+    background: #EBF7F8;
+    border-color: $--border-color;
+  }
+}
+
+.el-select-dropdown {
+  border-radius: 0 0 4px 4px;
+
+  &.is-multiple {
+    .el-select-dropdown__item {
+      &.selected {
+        color: #606266;
+      }
+    }
+  }
+}
+
+.el-select-dropdown__item {
+  &.selected {
+    color: #606266;
+  }
+
+  &.hover, &:hover {
+    background-color: #EBF7F8;
+  }
+}
+
+.el-cascader-node {
+  &.in-active-path, &.is-active {
+    color: #606266;
+  }
+
+  &.is-selectable {
+    &.in-checked-path {
+      color: #606266;
+    }
+  }
+
+  &:not(.is-disabled) {
+    &:focus, &:hover {
+      background: #EBF7F8;
+    }
+  }
+}
+
+.time-select-item {
+  &:hover {
+    background-color: #EBF7F8;
+  }
+
+  &.selected {
+    &:not(.disabled) {
+      color: #606266;
+    }
+  }
+}
+
+.el-time-panel__btn {
+  &.confirm {
+    color: $--font-color;
+  }
+}
+
+.el-input-number__decrease,
+.el-input-number__increase {
+  &:hover {
+    color: $--font-color;
+
+    &:not(.is-disabled) {
+      ~ .el-input {
+        .el-input__inner:not(.is-disabled) {
+          border-color: $--border-color;
+        }
+      }
+    }
+  }
+}
+
+.el-cascader {
+  .el-input {
+    .el-input__inner {
+      &:focus {
+        border-color: $--border-color;
+      }
+    }
+
+    &.is-focus {
+      .el-input__inner {
+        border-color: $--border-color;
+      }
+    }
+  }
+}
+
+.el-year-table {
+  td {
+    .cell {
+      &:hover {
+        color: #007993;
+        background-color: #EBF7F8;
+      }
+    }
+
+    &.today {
+      .cell {
+        color: #606266;
+        //border: 1px solid #000028;
+      }
+    }
+
+    &.current {
+      &:not(.disabled) {
+        .cell {
+          color: #fff;
+          background-color: $--background-color-base;
+        }
+      }
+    }
+  }
+}
+
+.el-date-table {
+  td {
+    div {
+      &:hover {
+        background-color: #EBF7F8;
+      }
+    }
+
+    &.selected {
+      span {
+        color: #fff;
+        font-weight: 700;
+        background: linear-gradient(0deg, rgba(0, 81, 89, 0.74), rgba(0, 81, 89, 0.74)), #FFFFFF;
+      }
+
+      div {
+        &:hover {
+          border-radius: unset;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.today {
+      span {
+        color: #606266;
+        border: 1px solid $--border-color-base;
+      }
+    }
+
+    &.current {
+      &:not(.disabled) {
+        span {
+          background-color: $--background-color-base;
+        }
+      }
+    }
+
+    &.available {
+      &:hover {
+        color: #007993;
+
+      }
+    }
+
+    &.start-date, &.end-date {
+      span {
+        background-color: $--background-color-base;
+      }
+    }
+  }
+}
+
+.el-month-table {
+  td {
+    .cell {
+      &:hover {
+        color: #007993;
+        border-radius: unset;
+        background-color: #EBF7F8;
+      }
+    }
+
+    &.today {
+      .cell {
+        color: #007993;
+      }
+    }
+
+    &.current {
+      &:not(.disabled) {
+        .cell {
+          color: #fff;
+          border-radius: unset;
+          background-color: $--background-color-base;
+        }
+      }
+    }
+
+    &.start-date, &.end-date {
+      .cell {
+        background-color: $--background-color-base;
+
+        &:hover {
+          color: #fff;
+          border-radius: 18px;
+          background-color: $--background-color-base;
+        }
+      }
+    }
+
+  }
+}
+
+.el-range-editor {
+  &.is-active {
+    border-color: $--border-color;
+  }
+
+  &.is-active {
+    &:hover {
+      border-color: $--border-color;
+    }
+  }
+}
+
+.el-range-editor {
+  &.is-active {
+    border-color: $--border-color;
+
+    &:hover {
+      border-color: $--border-color;
+    }
+  }
+}
+
+.el-select {
+  width: 100%;
+
+  .el-input {
+    &.is-focus {
+      .el-input__inner {
+        border-color: $--border-color;
+      }
+    }
+  }
+
+  .el-input__inner {
+    &:focus {
+      border-color: $--border-color;
+    }
+  }
+}
+
+//日期格式宽度100%
+.el-date-editor {
+  &.el-input {
+    width: 100%;
+  }
+  .el-range-input{
+    color: $--font-color;
+  }
+}
+
+.el-date-editor--monthrange {
+  &.el-input__inner {
+    width: 100%;
+  }
+}
+
+.el-date-editor--daterange, .el-date-editor--timerange, .el-date-editor--datetimerange {
+  &.el-input, &.el-input__inner {
+    width: 100%;
+  }
+}
