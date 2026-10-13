@@ -1,4 +1,4 @@
-<!-- si-default components -->
+<!-- wl-default components -->
 <template>
   <div class="WlDefault"></div>
 </template>

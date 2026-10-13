@@ -12,6 +12,7 @@ const version = pkg.version;
 import "./styles/wl-ui.scss";
 
 
+import WlAmountInput from './common/wl-amount-input'
 import WlBarCode from './common/wl-barcode'
 import WlButton from './common/wl-button'
 import WlCard from './common/wl-card'
@@ -25,6 +26,7 @@ import WlSelectTable from './common/wl-select-table'
 import WlVirtualSelect from './common/wl-virtual-select'
 
 const components = [
+    WlAmountInput,
     WlBarCode,
     WlButton,
     WlCard,
@@ -89,6 +91,7 @@ export default {
     version,
     install,
     // 组件
+    WlAmountInput,
     WlBarCode,
     WlButton,
     WlCard,

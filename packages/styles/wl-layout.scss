@@ -1,5 +1,5 @@
 /**
- * Si-UI 全局公共样式
+ * weiFlow-ui 全局公共样式
  * Created by Siemens
  */
 //$fontColor: #000028; /*字体颜色*/
@@ -16,7 +16,7 @@ $--select-color: #4C4C68; /*select cascader 下拉角标颜色*/
 // cover some element-ui styles
 
 /* 通用表单样式 */
-.si-form {
+.wl-form {
   .el-form-item {
     margin-bottom: 22px;
 
@@ -29,7 +29,7 @@ $--select-color: #4C4C68; /*select cascader 下拉角标颜色*/
     }
   }
 }
-.si-select {
+.wl-select {
   .el-input {
     .el-select__caret {
       color: $--select-color;
@@ -52,7 +52,7 @@ $--select-color: #4C4C68; /*select cascader 下拉角标颜色*/
 
 }
 
-.si-radio {
+.wl-radio {
   .el-radio-button__inner {
     &:hover {
       //color: #005159 ;

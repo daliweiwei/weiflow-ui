@@ -13,7 +13,7 @@ const _config = {
 // 初始化配置;
 export function setConfig(options = {}) {
   if (!options || typeof options !== "object" || Array.isArray(options)) {
-    console.warn("[SiUI] setConfig 参数必须是一个对象");
+    console.warn("[WeiFlowUI] setConfig 参数必须是一个对象");
     return;
   }
   Object.keys(options).forEach((key) => {
@@ -22,7 +22,7 @@ export function setConfig(options = {}) {
       if (value && typeof value === "object" && !Array.isArray(value)) {
         _config.methods = { ..._config.methods, ...value };
       } else {
-        console.warn("[SiUI] setConfig: methods 必须是一个对象");
+        console.warn("[WeiFlowUI] setConfig: methods 必须是一个对象");
       }
     } else {
       _config[key] = options[key];
@@ -38,7 +38,7 @@ export function getConfig() {
 // 获取单个配置项;
 export function getConfigItem(key) {
   if (!Object.prototype.hasOwnProperty.call(_config, key)) {
-    console.warn(`[si-ui] ⚠️ 配置项 "${key}" 不存在`);
+    console.warn(`[weiFlow-ui] ⚠️ 配置项 "${key}" 不存在`);
     return undefined;
   }
   return _config[key];
@@ -50,14 +50,14 @@ export function invokeMethod(methodName, ...args) {
   if (typeof method === "function") {
     return method(...args);
   }
-  console.warn(`[si-ui] ⚠️ 自定义方法 "${methodName}" 未注入`);
+  console.warn(`[weiFlow-ui] ⚠️ 自定义方法 "${methodName}" 未注入`);
 }
 
 // 获取 store 实例，统一校验入口
 function getStore(scene) {
   const store = _config.store;
   if (!store) {
-    console.warn(`[si-ui] ⚠️ store 未注入，无法执行: ${scene}`);
+    console.warn(`[weiFlow-ui] ⚠️ store 未注入，无法执行: ${scene}`);
     return null;
   }
   return store;
@@ -66,7 +66,7 @@ function getStore(scene) {
 // 获取宿主 store.state 中的值（支持嵌套路径）
 export function invokeStoreState(path) {
   if (typeof path !== "string" || !path.trim()) {
-    console.warn("[si-ui] ⚠️ invokeStoreState: path 必须是非空字符串");
+    console.warn("[weiFlow-ui] ⚠️ invokeStoreState: path 必须是非空字符串");
     return undefined;
   }
   const store = getStore(`state: ${path}`);

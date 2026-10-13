@@ -1,5 +1,5 @@
 <template>
-  <div class="barCodeView">
+  <div class="BarCodeView">
     <h4>条形码</h4>
     <p>https://github.com/lindell/JsBarcode/wiki/Options</p>
     <p>tag:String 默认值：svg 渲染类型：svg / canvas / img</p>
@@ -28,7 +28,7 @@
 </template>
 <script>
 export default {
-  name: "barCodeView",
+  name: "BarCodeView",
   data() {
     return {
       code: "liweiliang",

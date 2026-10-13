@@ -36,7 +36,7 @@
           placeholder="请输入内容"
           @blur="handleBlur"
       ></el-input>
-      <si-amount-input
+      <wl-amount-input
           v-else-if="type == 'amountInput'"
           ref="amountInputRef"
           v-model="rowData[name]"

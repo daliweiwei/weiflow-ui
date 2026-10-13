@@ -173,7 +173,7 @@
 
 <script>
 export default {
-  name: "SiSelectTable",
+  name: "WlSelectTable",
   props: {
     value: {
       type: [Object, Array, null],

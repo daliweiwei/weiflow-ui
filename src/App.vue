@@ -11,13 +11,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
+  components: {},
   data() {
     return {
       munuList: [
@@ -26,41 +23,31 @@ export default {
           path: "/"
         },
         {
-          label: "barCode",
-          path: "/barCode"
-        },
-        {
           label: "Install",
           path: "/install"
         },
         {
-          label: "Common",
-          path: "/common"
+          label: "ui",
+          path: "/uiView"
         },
         {
-          label: "demo",
-          path: "/demo"
+          label: "barCode",
+          path: "/barCode"
         },
         {
-          label: "login",
-          path: "/login"
+          label: "qrCode",
+          path: "/qrCode"
         },
         {
-          label: "siui",
-          path: "/siui"
+          label: "VirtualSelect",
+          path: "/virtualSelect"
         },
+
         {
-          label: "form",
-          path: "/form"
+          label: "fault",
+          path: "/fault"
         },
-        {
-          label: "dialog",
-          path: "/dialog"
-        },
-        {
-          label: "about",
-          path: "/about"
-        }
+
       ]
     }
   }
@@ -72,7 +59,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
