@@ -31,6 +31,10 @@ export default {
           path: "/uiView"
         },
         {
+          label: "component",
+          path: "/component"
+        },
+        {
           label: "barCode",
           path: "/barCode"
         },
