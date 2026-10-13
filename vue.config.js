@@ -57,12 +57,6 @@ module.exports = defineConfig({
                 amd: "VueI18n",
                 root: "VueI18n"
             },
-            "@riophae/vue-treeselect": {
-                commonjs: "@riophae/vue-treeselect",
-                commonjs2: "@riophae/vue-treeselect",
-                amd: "VueTreeselect",
-                root: "VueTreeselect"
-            },
             "vue-virtual-scroller": {
                 commonjs: "vue-virtual-scroller",
                 commonjs2: "vue-virtual-scroller",

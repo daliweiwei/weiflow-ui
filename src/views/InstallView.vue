@@ -13,8 +13,6 @@
       <h3>Install</h3>
       <pre>
       <code>npm install weiflow-ui -S</code>
-        <!--      <code>npm i vue-virtual-scroller@^1.1.2 @riophae/vue-treeselect@^0.4.0 js-cookie@^3.0.5 vue-i18n@^8.28.2-->
-        <!--</code>-->
     </pre>
       <h3>Quick Start</h3>
       <pre>
