@@ -31,8 +31,16 @@ export default {
           path: "/uiView"
         },
         {
-          label: "component",
-          path: "/component"
+          label: "common",
+          path: "/common"
+        },
+        {
+          label: "dialog",
+          path: "/dialog"
+        },
+        {
+          label: "form",
+          path: "/form"
         },
         {
           label: "barCode",
@@ -46,7 +54,6 @@ export default {
           label: "VirtualSelect",
           path: "/virtualSelect"
         },
-
         {
           label: "fault",
           path: "/fault"

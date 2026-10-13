@@ -20,8 +20,8 @@ const routes = [
         component: () => import("../views/Uiview.vue")
     },
     {
-        path: "/component",
-        name: "component",
+        path: "/common",
+        name: "common",
         component: () => import("../views/componentView.vue")
     },
     {
@@ -44,51 +44,18 @@ const routes = [
         name: "fault",
         component: () => import("../views/FaultView.vue")
     },
-    // {
-    //   path: "/WeiFlowUI",
-    //   name: "WeiFlowUI",
-    //   component: () => import("../views/WeiFlowUIView.vue")
-    // },
-    // {
-    //   path: "/form",
-    //   name: "form",
-    //   component: () => import("../views/FormView.vue")
-    // },
-    // {
-    //   path: "/dialog",
-    //   name: "dialog",
-    //   component: () => import("../views/DialogView.vue")
-    // },
-    // {
-    //   path: "/install",
-    //   name: "install",
-    //   component: () => import("../views/InstallView.vue")
-    // },
-    // {
-    //   path: "/common",
-    //   name: "common",
-    //   component: () => import("../views/commonView.vue")
-    // },
-    // {
-    //   path: "/bsceWorkFlow",
-    //   name: "bsceWorkFlow",
-    //   component: () => import("../views/bsceWorkFlowView.vue")
-    // },
-    // {
-    //   path: "/decimal",
-    //   name: "decimal",
-    //   component: () => import("../views/DecimalView.vue")
-    // },
-    // {
-    //   path: "/fault",
-    //   name: "fault",
-    //   component: () => import("../views/faultView.vue")
-    // },
-    // {
-    //   path: "/demo",
-    //   name: "demo",
-    //   component: () => import("../views/DemoView.vue")
-    // }
+    {
+        path: "/form",
+        name: "form",
+        component: () => import("../views/FormView.vue")
+    },
+    {
+        path: "/dialog",
+        name: "dialog",
+        component: () => import("../views/DialogView.vue")
+    },
+
+
 ];
 
 const router = new VueRouter({

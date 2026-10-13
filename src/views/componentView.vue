@@ -69,6 +69,16 @@
         <wl-pagination :total="1000" page.sync="1" limit.sync="10"/>
       </div>
     </div>
+    <div class="wei-flex">
+    <div class="wei-flex-item">
+      <label>价格千分位</label>
+      <wl-amount-input v-model="form.minQuantity" />
+    </div>
+    <div class="wei-flex-item">
+      <label>价格千分位只读</label>
+      <wl-amount-input v-model="form.minQuantity1" readonly />
+    </div>
+    </div>
 
 
   </div>
@@ -140,6 +150,10 @@ export default {
       },
       dbRowAmountData: {
         amountValue: "123"
+      },
+      form: {
+        minQuantity: "",
+        minQuantity1: ""
       },
     };
   },
